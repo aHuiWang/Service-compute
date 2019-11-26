@@ -14,20 +14,103 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" th:href=@{/css/table.css} href="../static/css/table.css" />
-    <script src="js/table.js"></script>
+    <script src="../static/js/table.js" th:src=@{/js/table.js} ></script>
     <script>
         $(document).ready(function () {
             $('#result-table').DataTable();
         });
     </script>
+    <!--?新加的模板-->
+    <link href="../static/query/css/animate.css" th:href=@{/query/css/animate.css} rel="stylesheet" type="text/css" media="all">
+    <link href="../static/query/css/header.css" th:href=@{/query/css/header.css} rel="stylesheet" type="text/css" media="all">
+    <!--?<link href="../static/query/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--?<link href="../static/query/css/theme.css" rel="stylesheet">-->
+    <!--?<link href="../static/query/css/bootstrap-reset.css" rel="stylesheet">-->
+    <!--?<!--external css-->
+    <!--?<link rel="stylesheet" href="../static/query/css/flexslider.css" />-->
+
+
 </head>
 
 <body>
+
+<!--?新模块-->
+<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>More than 10 new destinations for your trip</p>
+					</div>
+					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="top-header-right-info">
+							<!--?<ul>-->
+								<!--?<li><a href="login_lcy.html">Login</a></li>-->
+								<!--?<li><a href="registration.html">Sign up</a></li>-->
+							<!--?</ul>-->
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="home.html"><img src="../static/query/images/logo.jpg" th:src=@{/query/images/logo.jpg} alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="usr-query.html" class="active">Services</a></li>
+								<li><a href="about.html">About</a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--?新模块结束-->
+    <!--?<header class="header-frontend">-->
+        <!--?<div class="navbar navbar-default navbar-static-top">-->
+            <!--?<div class="container">-->
+                <!--?<div class="navbar-header">-->
+                    <!--?<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+                        <!--?<span class="icon-bar"></span>-->
+                        <!--?<span class="icon-bar"></span>-->
+                        <!--?<span class="icon-bar"></span>-->
+                    <!--?</button>-->
+
+                        <!--?<img style="width:179px; height:100px" src="../static/query/images/logo.jpg" th:src=@{/query/images/logo.jpg} alt="logo-2" >-->
+
+                <!--?</div>-->
+                <!--?<div class="navbar-collapse collapse ">-->
+                    <!--?<ul class="nav navbar-nav">-->
+                        <!--?<li><a href="home.html">Home</a></li>-->
+                        <!--?<li class="active"><a href="usr-query.html">Services</a></li>-->
+                        <!--?<li><a href="about.html">About</a></li>-->
+                        <!--?<!--<li><input type="text" placeholder=" Search" class="form-control search"></li>-->
+                    <!--?</ul>-->
+                <!--?</div>-->
+            <!--?</div>-->
+        <!--?</div>-->
+    <!--?</header>-->
+
     <div class="container">
-        <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
+        <!--?<h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>-->
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">Tasks</h3>
+                <h3 class="panel-title">Recommendation List</h3>
                 <div class="pull-right">
                     <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
                         data-container="body">
@@ -70,4 +153,10 @@
                 </tbody>
             </table>
         </div>
+    </div>
+	<div class="footer">
+			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
+				<p>© 2019 赵博瑄、王辉、任瑞阳 - 服务计算课程设计</p>
+			</div>
+		</div>
 </body>
