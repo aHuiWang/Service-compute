@@ -11,12 +11,88 @@
 	src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--?新加的模板快-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/style.css}  href="../static/query/css/style.css" />-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/jquery-ui.css}  href="../static/query/css/jquery-ui.css" />-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/font-awesome.css}  href="../static/query/css/font-awesome.css" />-->
+
+<link href="../static/query/css/bootstrap.css" th:href=@{/query/css/bootstrap.css} rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" th:href=@{/query/css/style.css} href="../static/query/css/style.css" type="text/css" media="all" />
+<link href="../static/query/css/font-awesome.css" th:href=@{/query/css/font-awesome.css} rel="stylesheet">
+
+<script src="../static/query/js/jquery-1.11.1.min.js" th:src=@{/query/js/jquery-1.11.1.min.js}> </script>
+<script src="../static/query/js/bootstrap.js" th:src=@{/query/js/bootstrap.js}></script>
+<script type="text/javascript" src="../static/query/js/move-top.js" th:src=@{/query/css/move-top.js}></script>
+<script type="text/javascript" src="../static/query/js/easing.js" th:src=@{/query/js/easing.js}></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--animate-->
+<link href="../static/query/css/animate.css" th:href=@{/query/css/animate.css} rel="stylesheet" type="text/css" media="all">
+<script src="../static/query/js/wow.min.js" th:src=@{/query/js/wow.min.js} ></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--?结束新加的模板快-->
 </head>
 <body>
-	<form th:action="@{/}" method="get">
-		<button class="btn btn-md btn-warning btn-block" type="Submit">Go
-			To Login Page</button>
-	</form>
+<!--?新模块-->
+
+<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>More than 10 new destinations for your trip</p>
+					</div>
+					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="top-header-right-info">
+							<ul>
+								<li><a href="login_lcy.html">Login</a></li>
+								<!--?<li><a href="registration.html">Sign up</a></li>-->
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="home.html"><img src="../static/query/images/logo.jpg" th:src=@{/query/images/logo.jpg} alt="" /></a></h1></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="usr-query.html">Services</a></li>
+								<li><a href="about.html">About</a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--?新模块结束-->
+	<!--?<form th:action="@{/}" method="get">-->
+		<!--?<button class="btn btn-md btn-warning btn-block" type="Submit">Go-->
+			<!--?To Login Page</button>-->
+	<!--?</form>-->
 
 	<div class="container">
 		<div class="row">
@@ -24,7 +100,7 @@
 				<form autocomplete="off" action="#" th:action="@{/registration}"
 					th:object="${user}" method="post" class="form-horizontal"
 					role="form">
-					<h2>Registration</h2>
+					<h2>Sign Up</h2>
 					<div class="form-group">
 						<div class="col-sm-9">
 							<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -89,6 +165,13 @@
 			</div>
 		</div>
 	</div>
+<!-- footer -->
+	<div class="footer">
+			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
+				<p>© 2019 赵博瑄、王辉、任瑞阳 - 服务计算课程设计</p>
+			</div>
+		</div>
+	<!-- //footer -->
 
 </body>
 </html>

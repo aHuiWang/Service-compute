@@ -24,7 +24,8 @@
 	<form class="form form-horizontal" id="form-article-add" th:action="@{/airline-add.html}" th:object="${airline}" method="post" action="#">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>航班号：</label>
-			<div class="formControls col-xs-8 col-sm-9">
+
+            <div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="airlineid" name="airlineid" th:field="*{airlineId}" required />
 			</div>
 		</div>

@@ -1,0 +1,114 @@
+
+.header{
+    position:relative;
+}
+
+.logo h1 {
+    margin: 0;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    width: 170px;
+    z-index: 999;
+}
+.logo h1 a {
+     display:block;
+}
+.logo h1 a img{
+    width:100%
+}
+
+/*-- top-header --*/
+.top-header-left{
+    float: left;
+    width: 50%;
+}
+.top-header-left p{
+    color: #909090;
+    font-size: .7em;
+    margin: 0.5em 0 0 16em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.top-header{
+    background: #353535;
+    padding: .7em 0;
+}
+.top-header-right{
+    float:right;
+    width:25%;
+}
+.top-header-right-info{
+    float:left;
+}
+.top-header-right-info ul {
+    padding:0;
+    margin:0;
+}
+.top-header-right-info ul li{
+    display:inline-block;
+    margin:0 1em;
+}
+.top-header-right-info ul li a {
+    color: #909090;
+    font-size: .7em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.top-header-right-info ul li a:hover{
+    text-decoration:none;
+    color:#2DCB74;
+}
+
+.bottom-header {
+    background: #FFF;
+}
+.top-nav{
+    background:#FFF;
+}
+.navbar-default {
+    border: none !important;
+    background: none !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: none !important;
+}
+div#bs-example-navbar-collapse-1 {
+    padding: 0;
+}
+.top-nav ul{
+    padding: 0;
+    margin: 0 0 0 11em;
+    float: none;
+}
+.top-nav ul li{
+    display: inline-block;
+    margin: 0;
+    float: left;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background: none !important;
+    border-right: solid 1px #EFEFEF;
+    box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0);
+}
+.top-nav ul li a{
+    color: #353535 !important;
+    font-size: 1em;
+    font-family: 'Francois One', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    padding: 2.1em;
+    border-right: solid 1px #EFEFEF;
+    box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0);
+}
+.top-nav ul li a:hover{
+    color: #2DCB74 !important;
+}
+.top-nav ul li a.active{
+    color: #2DCB74 !important;
+}

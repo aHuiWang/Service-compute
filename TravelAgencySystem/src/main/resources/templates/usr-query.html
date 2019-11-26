@@ -12,12 +12,39 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" th:href=@{/h-ui/css/H-ui.min.css} href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" th:href=@{/h-ui.admin/css/H-ui.admin.css} href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" th:href=@{/lib/Hui-iconfont/1.0.8/iconfont.css} href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" th:href=@{/h-ui.admin/skin/default/skin.cs} href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" th:href=@{/h-ui.admin/css/style.css}  href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" th:href=@{/h-ui/css/H-ui.min.css} href="../static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" th:href=@{/h-ui.admin/css/H-ui.admin.css} href="../static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" th:href=@{/lib/Hui-iconfont/1.0.8/iconfont.css} href="../lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" th:href=@{/h-ui.admin/skin/default/skin.css} href="../static/h-ui.admin/skin/default/skin.css" id="skin" />
 
+<!--?新加的模板快-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/style.css}  href="../static/query/css/style.css" />-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/jquery-ui.css}  href="../static/query/css/jquery-ui.css" />-->
+<!--?<link rel="stylesheet" type="text/css" th:href=@{/query/css/font-awesome.css}  href="../static/query/css/font-awesome.css" />-->
+
+<link href="../static/query/css/bootstrap.css" th:href=@{/query/css/bootstrap.css} rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" th:href=@{/query/css/style.css} href="../static/query/css/style.css" type="text/css" media="all" />
+<link href="../static/query/css/font-awesome.css" th:href=@{/query/css/font-awesome.css} rel="stylesheet">
+
+<script src="../static/query/js/jquery-1.11.1.min.js" th:src=@{/query/js/jquery-1.11.1.min.js}> </script>
+<script src="../static/query/js/bootstrap.js" th:src=@{/query/js/bootstrap.js}></script>
+<script type="text/javascript" src="../static/query/js/move-top.js" th:src=@{/query/css/move-top.js}></script>
+<script type="text/javascript" src="../static/query/js/easing.js" th:src=@{/query/js/easing.js}></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--animate-->
+<link href="../static/query/css/animate.css" th:href=@{/query/css/animate.css} rel="stylesheet" type="text/css" media="all">
+<script src="../static/query/js/wow.min.js" th:src=@{/query/js/wow.min.js} ></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--?结束新加的模板快-->
 
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -28,43 +55,95 @@
 <title>用户初始界面</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<!--?新模块-->
+
+<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>More than 10 new destinations for your trip</p>
+					</div>
+					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="top-header-right-info">
+							<ul>
+								<li><a href="login_lcy.html">Login</a></li>
+								<li><a href="registration.html">Sign up</a></li>
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="home.html"><img src="../static/query/images/logo.jpg" th:src=@{/query/images/logo.jpg} alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="usr-query.html" class="active">Services</a></li>
+								<li><a href="about.html">About</a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--?新模块结束-->
+
+<!--?<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>-->
 
 <article class="page-container">
-	<form form class="form form-horizontal" id="form-article-add"  id="form--add" th:action="@{/result-list.html}"
+	<form class="form form-horizontal" id="form-article-add"  th:action="@{/result-list.html}"
                   th:object="${userrequest}" method="get" action="#">
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>目的地：</label>
 
-			<div class="formControls col-xs-8 col-sm-9">
-			    
-				<input type="text" th:field="*{aim}" class="input-text" value="" placeholder="" id="aim" name="aim" required>
-			</div>
-		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>出发地点：</label>
+			<label class="form-label col-xs-4 col-sm-2"></label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" th:field="*{depature_point}" class="input-text" value="" placeholder="" id="departure" name="departure" required>
-			</div>
-		</div>
-		
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>出发日期：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" th:field="*{departure_time}"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})" id="departure_time" name="departure_time" class="input-text Wdate" required>
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>返回日期：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" th:field="*{return_time}"  onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'departure_time\')}' })" id="arrival_time" name="arrival_time" class="input-text Wdate" required>
+				<input type="text" th:field="*{depature_point}" class="input-text" value="" placeholder="出发地" id="departure" name="departure" required>
 			</div>
 		</div>
 
         <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>预算(元)：</label>
+			<label class="form-label col-xs-4 col-sm-2"></label>
+
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" th:field="*{cost}"  class="input-text" value="" placeholder="" id="money" name="money" required>
+
+				<input type="text" th:field="*{aim}" class="input-text" value="" placeholder="目的地" id="aim" name="aim" required>
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"></label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" th:field="*{departure_time}" placeholder="出发日期" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})" id="departure_time" name="departure_time" class="input-text Wdate" required>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"></label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" th:field="*{return_time}" placeholder="返回日期" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'departure_time\')}' })" id="arrival_time" name="arrival_time" class="input-text Wdate" required>
+			</div>
+		</div>
+
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"></label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" th:field="*{cost}"  class="input-text" value="" placeholder="预算(元)" id="money" name="money" required>
 			</div>
 		</div>
 
@@ -85,20 +164,22 @@
 </article>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" th:src=@{/lib/jquery/1.9.1/jquery.min.js} src="lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" th:src=@{/lib/layer/2.4/layer.js} src="lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" th:src=@{/h-ui/js/H-ui.min.js} src="static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" th:src=@{/h-ui.admin/js/H-ui.admin.js} src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer /作为公共模版分离出去-->
+<script type="text/javascript" th:src=@{/lib/jquery/1.9.1/jquery.min.js} src="../lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" th:src=@{/lib/layer/2.4/layer.js} src="../lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" th:src=@{/h-ui/js/H-ui.min.js} src="../static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" th:src=@{/h-ui.admin/js/H-ui.admin.js} src="../static/h-ui.admin/js/H-ui.admin.js"></script>
+
+ <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" th:src=@{/lib/My97DatePicker/4.8/WdatePicker.js} src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/jquery.validate.js} src="lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
-<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/validate-methods.js} src="lib/jquery.validation/1.14.0/validate-methods.js"></script> 
-<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/messages_zh.js} src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
-<script type="text/javascript" th:src=@{/lib/webuploader/0.1.5/webuploader.min.js} src="lib/webuploader/0.1.5/webuploader.min.js"></script> 
-<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/ueditor.config.js} src="lib/ueditor/1.4.3/ueditor.config.js"></script> 
-<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/ueditor.all.min.js} src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
-<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js} src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" th:src=@{/lib/My97DatePicker/4.8/WdatePicker.js} src="../lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/jquery.validate.js} src="../lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/validate-methods.js} src="../lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" th:src=@{/lib/jquery.validation/1.14.0/messages_zh.js} src="../lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" th:src=@{/lib/webuploader/0.1.5/webuploader.min.js} src="../lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/ueditor.config.js} src="../lib/ueditor/1.4.3/ueditor.config.js"></script> 
+<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/ueditor.all.min.js} src="../lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
+<script type="text/javascript" th:src=@{/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js} src="../lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 
 <script type="text/javascript">
 
@@ -159,5 +240,12 @@ $(function(){
 
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
+<!-- footer -->
+	<div class="footer">
+			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
+				<p>© 2019 赵博瑄、王辉、任瑞阳 - 服务计算课程设计</p>
+			</div>
+		</div>
+	<!-- //footer -->
 </body>
 </html>
